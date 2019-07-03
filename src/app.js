@@ -5,6 +5,7 @@ const hbs=require('hbs');
 const app=express();
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
+const port=process.env.PORT || 3000
 
 //console.log(__dirname);
 //console.log(__filename);
@@ -104,6 +105,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log('listening on port no 3000')
+app.listen(port,()=>{
+    console.log('listening on port no '+port)
 })
